@@ -11,5 +11,6 @@ class FunderUserSerializer(serializers.ModelSerializer):
 class FundeeUserSerializer(serializers.ModelSerializer):
 
 	class Meta:
-		fields = '__all__'
+		fields = ['company_or_individual_name', 'account_number', 'email', 'bvn', 'company_or_individual_image', 'Id_or_CAC_verification']
+		
 		model = FundeeUser  

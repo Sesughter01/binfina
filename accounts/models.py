@@ -3,7 +3,7 @@ from django.contrib.auth.models import AbstractUser
 
 
 class FundeeUser(AbstractUser):
-	company_or_individual_name = models.CharField(max_length=50, null=True, blank=True, unique=True)
+	company_or_individual_name = models.CharField(max_length=50, null=True, blank=False, unique=True)
 	account_number = models.CharField(max_length=10)
 	email = models.EmailField(('email address'), unique = True)
 	bvn = models.CharField(max_length=11)
